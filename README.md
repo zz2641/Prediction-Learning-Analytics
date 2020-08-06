@@ -24,9 +24,6 @@ In this unit you will be working towards buildimg models to predict student cour
 
 [Jalayer Academy. (2015). R - Classification Trees (part 1 using C5.0)](https://www.youtube.com/watch?v=5NquIfQxpxk)
 
-## Knowledge Check
-
-Once you have completed all tasks in the unit, please complete the [knowledge check](https://tccolumbia.qualtrics.com/jfe/form/SV_bIchFX8s5M3Fdml).
 
 ## Additional Materials
 
