@@ -1,13 +1,13 @@
 ---
 title: "Prediction: Comparing Tress"
-author: "Charles Lang"
-date: "1/9/2018"
+author: "Zhongyuan Zhang"
+date: "3/9/2020"
 output: html_document
 ---
 
-In this assignment you will modelling student data using three flavors of tree algorithm: CART, C4.5 and C5.0. We will be using these algorithms to attempt to predict which students drop out of courses. Many universities have a problem with students over-enrolling in courses at the beginning of semester and then dropping most of them as the make decisions about which classes to attend. This makes it difficult to plan for the semester and allocate resources. However, schools don't want to restrict the choice of their students. One solution is to create predictions of which students are likley to drop out of which courses and use these predictions to inform semester planning. 
+In this project you will model student data using three flavors of tree algorithm: CART, C4.5 and C5.0. We will be using these algorithms to attempt to predict which students drop out of courses. Many universities have a problem with students **over-enrolling** in courses at the beginning of semester and then dropping most of them as the make decisions about which classes to attend. This makes it difficult to plan for the semester and allocate resources. However, schools don't want to restrict the choice of their students. One solution is to create predictions of which students are likely to drop out of which courses and use these predictions to inform semester planning. 
 
-In this assignment we will be using the tree algorithms to build models of which students are likely to drop out of which classes. 
+We will be using the tree algorithms to build models of which students are likely to drop out of which classes. 
 
 ## Software
 
@@ -33,6 +33,7 @@ Upload the drop-out.csv data into R as a data frame.
 ```{r}
 library(tidyverse)
 D1 <- read.csv("drop-out.csv", header = TRUE)
+D1$complete <- as.factor(D1$complete)
 str(D1)
 
 #D1$enroll_date_time<-as.POSIXct(D1$enroll_date_time,origin=Sys.Date())
@@ -56,7 +57,7 @@ TEST1 <- anti_join(D1, SAMPLE, by = "student_id")
 
 ```
 
-For this assignment you will be predicting the student level variable "complete". 
+For this project we will be predicting the student level variable "complete". 
 (Hint: make sure you understand the increments of each of your chosen variables, this will impact your tree construction)
 
 ```{r}
@@ -65,12 +66,9 @@ For this assignment you will be predicting the student level variable "complete"
 ## IV international: numeric 1, 0
 ## IV online: numeric 1, 0
 D2 <- D1 %>% 
-  mutate(complete=ifelse(complete=="yes", 1,0)) %>% 
-  mutate(international=ifelse(international=="yes", 1,0)) %>% 
-  mutate(online=ifelse(online=="yes", 1,0))
-
-
-# what's the point of recoding these variables here?
+  mutate(complete=as.factor(ifelse(complete=="yes", 1,0))) %>% 
+  mutate(international=as.factor(ifelse(international=="yes", 1,0))) %>% 
+  mutate(online=as.factor(ifelse(online=="yes", 1,0)))
 
 ```
 
@@ -99,7 +97,7 @@ dev.off()
 
 ## CART Trees
 
-In HUDK4050 we used the [rpart package](https://cran.r-project.org/web/packages/rpart/rpart.pdf) to generate CART tree models. Review your work using this package if you cannot remember how the trees are constructed. 
+In HUDK4050 we used the [rpart package](https://cran.r-project.org/web/packages/rpart/rpart.pdf) to generate CART tree models. But here we use caret.
 
 Construct a classification tree that predicts complete using the caret package.
 
@@ -120,7 +118,7 @@ cartFit <- train(complete ~ ., #Define which variable to predict
                 trControl = ctrl, #Tell caret the control elements (EG - the cross validation)
                 method = "rpart", #Define the model type
                 metric = "ROC", #Tell caret to calculate the ROC curve
-                preProc = c("center", "scale")) #Center and scale the data to minimize the ?? what?
+                preProc = c("center", "scale")) #Center and scale the data
 
 #Check the results
 cartFit
