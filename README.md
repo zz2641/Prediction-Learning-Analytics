@@ -5,14 +5,14 @@ Learning Analytics
 <img src="https://i0.wp.com/tommarch.com/wp-content/uploads/2020/01/Data-Analytics.001-1.jpeg?ssl=1" width="600"><br>
 
 
-Prediction of student behavior has been a prominant area of research in learning analytics and a major concern for higher education institutions and ed tech companies alike. It is the bedrock of [methodology within the world of cognitive tutors](https://solaresearch.org/hla-17/hla17-chapter5/) and these methods have been exported to other areas within the education technology landscape. The ability to predict what a student is likely to do in the future so that interventions can be tailored to them has seen major growth and investment, [though implementation is non-trivial and expensive](https://www.newamerica.org/education-policy/policy-papers/promise-and-peril-predictive-analytics-higher-education/). Although some institutions, such as [Purdue University](https://www.itap.purdue.edu/learning/tools/forecast.html), have seen success we are yet to see widespread adoption of these approaches as they tend to be highly institution specific and require very concrete outcomes to be useful. 
+Prediction of student behavior has been a prominant area of research in learning analytics and a major concern for higher education institutions and ed tech companies alike. It is the bedrock of [methodology within the world of cognitive tutors](https://solaresearch.org/hla-17/hla17-chapter5/) and these methods have been exported to other areas within the education technology landscape. The ability to predict what a student is likely to do in the future so that interventions can be tailored to them has seen major growth and investment, [though implementation is non-trivial and expensive](https://www.newamerica.org/education-policy/policy-papers/promise-and-peril-predictive-analytics-higher-education/). 
 
 ## Goals
 
 * Be able to discuss different uses for prediction algorithms in education
 * Compare different tree alogorithm, here specifically, CART, C4.5 and C5 classification algorithms
 
-<img src="https://qph.fs.quoracdn.net/main-qimg-fd3bd000bb9e904105b73fda2cc028bd-c" width="600"><br>
+   <img src="https://qph.fs.quoracdn.net/main-qimg-fd3bd000bb9e904105b73fda2cc028bd-c" width="600"><br>
 * Construct classification models to predict student dropout and state validation metrics for the model
 * Compare classification models on appropriate metrics
 
