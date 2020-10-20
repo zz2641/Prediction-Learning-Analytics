@@ -17,9 +17,19 @@ Prediction of student behavior has been a prominant area of research in learning
 * Compare classification models on appropriate metrics
 * Conclusion
 
-## Tasks for this Unit
+## Result
+Collectively, all the models have good performance in predicting student's dropout, achieving an accuracy rate ~90%.
 
-In this project you will be working towards buildimg models to predict student course dropout and then comparing those models. As background to this task please read over the follwing materials and watch the methodological videos. If you find any other useful materials please add them under **Additional Materials** at the end of the this page and pull request the change back to this repo.
+The summary gives us the 5 number summary of each model regarding to ROC, Sensitivity and Specificity.
+As for the best model, it should be performing most stably with less variance in the parameters. Here I use eyeballing and mean as equipment to determine which model is stabler. 
+
+-Horizontally inspected, **c50 model** is generally more stable than other models in ROC, Sensitivity and Specificity.
+To sum up, I think the c50 model is the best.
+
+Finding important variables/features that help determine the predictability:
+![]('Important variables.png')
+-It shows in the plot that "years" and "course_id", which all make sense since the longer time a student have spent in a program, a more possible learning difficulty is indicated; some courses are not so "student friendly" that fail student easily.
+
 
 ## Readings
 
