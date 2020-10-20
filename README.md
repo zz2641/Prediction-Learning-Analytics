@@ -26,9 +26,9 @@ As for the best model, it should be performing most stably with less variance in
 - Horizontally inspected, **c50 model** is generally more stable than other models in ROC, Sensitivity and Specificity.
 To sum up, I think the c50 model is the best.
 
-Finding important variables/features that help determine the predictability:
-![]('Important variables.png')
--It shows in the plot that "years" and "course_id", which all make sense since the longer time a student have spent in a program, a more possible learning difficulty is indicated; some courses are not so "student friendly" that fail student easily.
+Finding important variables/features that help determine the predictability:<br>
+![](Important variables.png)<br>
+- It shows in the plot that "years" and "course_id", which all make sense since the longer time a student have spent in a program, a more possible learning difficulty is indicated; some courses are not so "student friendly" that fail student easily.
 
 
 ## Readings
