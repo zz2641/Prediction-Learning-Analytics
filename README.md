@@ -23,7 +23,7 @@ Collectively, all the models have good performance in predicting student's dropo
 The summary gives us the 5 number summary of each model regarding to ROC, Sensitivity and Specificity.
 As for the best model, it should be performing most stably with less variance in the parameters. Here I use eyeballing and mean as equipment to determine which model is stabler. 
 
--Horizontally inspected, **c50 model** is generally more stable than other models in ROC, Sensitivity and Specificity.
+- Horizontally inspected, **c50 model** is generally more stable than other models in ROC, Sensitivity and Specificity.
 To sum up, I think the c50 model is the best.
 
 Finding important variables/features that help determine the predictability:
