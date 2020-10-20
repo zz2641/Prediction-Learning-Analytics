@@ -18,7 +18,7 @@ Prediction of student behavior has been a prominant area of research in learning
 * Conclusion
 
 ## Result
-Collectively, all the models have good performance in predicting student's dropout, achieving an accuracy rate ~90%.
+**Collectively, all the models have good performance in predicting student's dropout, achieving an accuracy rate ~90%.**
 
 The summary gives us the 5 number summary of each model regarding to ROC, Sensitivity and Specificity.
 As for the best model, it should be performing most stably with less variance in the parameters. Here I use eyeballing and mean as equipment to determine which model is stabler. 
