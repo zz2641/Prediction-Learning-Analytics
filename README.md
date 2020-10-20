@@ -28,7 +28,6 @@ To sum up, I think the c50 model is the best.
 
 Finding important variables/features that help determine the predictability:<br>
 ![](Important_variables.png)<br>
-
 - It shows in the plot that "years" and "course_id", which all make sense since the longer time a student have spent in a program, a more possible learning difficulty is indicated; some courses are not so "student friendly" that fail student easily.
 
 
